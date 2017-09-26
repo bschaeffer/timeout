@@ -20,7 +20,7 @@ defmodule Timeout.Mixfile do
       # ExDoc
       name: "Timeout",
       docs: [
-        main: "README",
+        main: "readme",
         source_ref: "v#{@version}",
         source_url: @repo_url,
         extras: ["README.md"]
