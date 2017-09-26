@@ -66,7 +66,7 @@ Add `timeout` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:timeout, "~> 0.1.0"}
+    {:timeout, "~> 0.2.0"}
   ]
 end
 ```

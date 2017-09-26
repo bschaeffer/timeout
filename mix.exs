@@ -1,7 +1,7 @@
 defmodule Timeout.Mixfile do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.2.0"
   @description "A module for working with configurable timeouts."
   @repo_url "https://github.com/bschaeffer/timeout"
 
