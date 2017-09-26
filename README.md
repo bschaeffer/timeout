@@ -42,7 +42,7 @@ defmodule MyPoller do
         {:noreply, {backend, timeout}}
       :empty ->
         # No work to do. Send after automatically increases the backoff
-        {timeout, delay} = timeout |> Timeout.send(:poll)
+        {timeout, delay} = timeout |> Timeout.send_after(:poll)
         Logger.debug("No work. Retrying in #{delay}ms")
         {:noreply, {backend, timeout}}
     end
@@ -51,7 +51,7 @@ defmodule MyPoller do
   def handle_info({:new_job, job}, {backend, timeout}) do
     Timeout.cancel_timer!(timeout)
     # Process job
-    timeout = timeout |> Timeout.reset() |> Timeout.send(:poll)
+    timeout = timeout |> Timeout.reset() |> Timeout.send_after!(:poll)
     {:noreply, {backend, timeout}}
   end
 end
