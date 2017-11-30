@@ -1,6 +1,8 @@
 # Timeout
 
+[![CircleCI](https://circleci.com/gh/bschaeffer/timeout.svg?style=svg)](https://circleci.com/gh/bschaeffer/timeout)
 [![hex.pm](https://img.shields.io/hexpm/v/timeout.svg "Hex version")](https://hex.pm/packages/timeout)
+
 
 `Timeout` is an api for managing and manipulating configurable timeouts. It was
 mainly built as a library to configure a timeout once, then start scheduling
